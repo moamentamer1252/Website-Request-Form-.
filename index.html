@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Request Form Mo Tc</title>
+    <style>
+        body {
+            font-family:Verdana, Geneva, Tahoma, sans-serif ;
+            background-image: url(https://cdn.pixabay.com/photo/2018/04/09/14/33/abstract-3304213_640.png);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .title {
+            font-family: Apple Chancery, cursive;
+            font-size: 36px;
+            color: #4A90E2;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .form-container {
+            display: flex;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .form-container img {
+            position: absolute;
+            top: -10px;
+            left: 950px;
+            width: 35px;
+            height: 35px;
+        }
+        
+        form {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        form h2 {
+            margin-bottom: 20px;
+        }
+        
+        form label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        form input, form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 95%;
+        }
+        
+        form button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 28px;
+            }
+
+            .form-container {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 15px;
+            }
+
+            form {
+                width: 90%;
+            }
+
+            form input, form textarea {
+                width: 100%;
+            }
+
+            form button {
+                width: 100%;
+            }
+
+            .form-container img {
+                position: relative;
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .form-container {
+                width: 80%;
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 20px;
+            }
+
+            form {
+                width: 70%;
+            }
+
+            .form-container img {
+                position: relative;
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Mo Tc</div>
+    <div class="form-container">
+        <form action="https://api.web3forms.com/submit" method="post">
+            <h2>Website Request Form</h2>
+            <label for="name">Full Name:</label>
+            <input type="hidden" name="access_key" value="fd3cd370-e0b6-4478-b9f6-b7a36726403b">
+            <input type="text" id="name" name="name" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" pattern="[0-9]{11}" id="phone" name="phone" maxlength="11" required>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" cols="100" rows="4"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
